@@ -1,8 +1,37 @@
 <html>
 	<head>
-		<title>EventHistoryCalendar</title>
+		<title>Loading JSON table</title>
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$.get("form.json",function(data){
+					var table="";
+					table+="<table border='1'><th border-bottom=0>Topics</th><th colspan='5'>Timeline</th><tr><td></td>";
+					for(i=0;i<data.timeline.length;i++){
+						table+="<td>"+data.timeline[i].timeItemLabel+"</td>";
+					}
+					
+					table+="</tr>";
+					for(i=0;i<data.topics.length;i++){
+						table+="<tr><td>"+data.topics[i].topicLabel+"</td>";
+						for(j=0;j<data.timeline.length;j++){
+						table+="<td></td>";
+						}
+						
+						table+="</tr>";
+					}
+					table+="</table>";
+					$("#main").append(table);
+					console.log(table);
+					console.log(data);
+				});
+			
+			});
+		
+		</script>
 	</head>
-	<body>
-	
-	</body>
+
+<body>
+<div id="main"></div>
+</body>
 </html>

@@ -1,37 +1,41 @@
 <html>
 	<head>
-		<title>Loading JSON table</title>
-		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-		<script>
-			$(document).ready(function(){
-				$.get("form.json",function(data){
-					var table="";
-					table+="<table border='1'><tr><td rowspan="2">Topics</td><td colspan='5'>Timeline</td></tr><tr><td></td>";
-					for(i=0;i<data.timeline.length;i++){
-						table+="<td>"+data.timeline[i].timeItemLabel+"</td>";
-					}
-					
-					table+="</tr>";
-					for(i=0;i<data.topics.length;i++){
-						table+="<tr><td>"+data.topics[i].topicLabel+"</td>";
-						for(j=0;j<data.timeline.length;j++){
-						table+="<td></td>";
-						}
-						
-						table+="</tr>";
-					}
-					table+="</table>";
-					$("#main").append(table);
-					console.log(table);
-					console.log(data);
-				});
-			
-			});
+		<title>EventHistoryCalendar</title>
 		
-		</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+		<script src="js/myfuncs.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		
+		
+		 <script src="js/bootstrap.min.js"></script>
+		
+		
+		
 	</head>
 
 <body>
-<div id="main"></div>
+	<div data-role="page" id="pageone">
+	  <div data-role="header">
+		<h1><b>EventHistoryCalendar</b></h1>
+	  </div>
+		<div data-role="main" class="ui-content">
+		
+		<div id="main"></div>
+		<div id="main2"></div>
+		
+		</div>
+	
+	<div data-role="footer">
+    <h1><b>EventHistoryCalendar</b></h1>
+  </div>
+
+
+	<br/>
+
 </body>
 </html>

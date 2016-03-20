@@ -6,7 +6,7 @@
 			$(document).ready(function(){
 				$.get("form.json",function(data){
 					var table="";
-					table+="<table border='1'><th border-bottom=0>Topics</th><th colspan='5'>Timeline</th><tr><td></td>";
+					table+="<table border='1'><tr><td rowspan="2">Topics</td><td colspan='5'>Timeline</td></tr><tr><td></td>";
 					for(i=0;i<data.timeline.length;i++){
 						table+="<td>"+data.timeline[i].timeItemLabel+"</td>";
 					}

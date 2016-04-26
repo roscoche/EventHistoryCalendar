@@ -1,13 +1,13 @@
 			//document.addEventListener("deviceready", function(){
 			$(document).ready(function(){
 				
-				
+				var path = window.location.href.replace('children.html', '');
 				var original_H = 0;				
 				var savedItem = "";
 				
 				//Draw table and items
-				$.getJSON("formchildren.json", function(data){
-					$.getJSON("savechildren.json", function(calendarData){
+				$.getJSON(path+"formchildren.json", function(data){
+					$.getJSON(path+"savechildren.json", function(calendarData){
 						//Draw table
 						var table = "";
 						var color = ["#5c91c6","#aac368","907ab0","cc665d","f9a757"]
@@ -51,7 +51,7 @@
 						$("#main").append(table);
 						
 						//Get original size of the top cell
-						original_H = $('#top').height() - 31;						
+						original_H = $('#top').height() - 36;						
 						
 						//Make each item draggable			
 						$(".drag-image").draggable({						

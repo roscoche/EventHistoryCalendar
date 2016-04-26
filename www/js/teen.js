@@ -35,7 +35,8 @@ function buildForm(div){
 								else{
                                     $td=$("<td id='"+data.topics[j].topicID+"_"+data.timeline[i-1].timeItemID+"'></td>");
                                     $td.click(function(){
-                                                $input=$("<input type='text' >");
+                                       if($(this).children().length==0){
+                                                     $input=$("<textarea>");
                                                 $input.css("width","100%");
                                                 $(this).append($input);
                                                 $input.focus();
@@ -49,7 +50,9 @@ function buildForm(div){
                                                 $.post('updateData.php', dataToSend);
                                                 $input.parent().html($input.val());
                                                 $input.remove();
-                                            })
+                                            })     
+                                                
+                                               
                                             if($(this).html()){
                                                 var content = $(this).text();
                                                 $(this).contents().filter(function(){
@@ -60,7 +63,7 @@ function buildForm(div){
                                             }else{
                                                
                                             }
-                                           
+                                                }
 //                                        }
                                     })
                                     $tr.append($td);

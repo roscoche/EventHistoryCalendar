@@ -12,7 +12,6 @@
 		<script src="js/jquery-1.11.3.min.js"></script>
 		<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
 		<link rel="stylesheet" href="css/mystyle.css">
-		<script src="js/myfuncs.js"></script>
 		<script src="js/jquery.mobile-1.4.5.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		
@@ -22,11 +21,12 @@
 
 <body>
 <!-- THE FORM WILL BE APPENDED HERE-->
-<div data-role="header" data-position="fixed"><center>EventHistoryCalendar</center></div>
-<div data-role="content" id="mainindex">
-<a class='ui-btn' href='children.html'>Children</a>
-<a class='ui-btn' href='teen.html'>Teen</a>
-</div>
-<div data-role="footer" data-position="fixed"><center>EventHistoryCalendar</center></div>
+	<div data-role="header" data-position="fixed"><center>EventHistoryCalendar</center></div>
+		<div data-role="content" id="mainindex">
+			<button onclick="window.open('./children.html','_self')">Children Form</button>
+			<button onclick="window.open('./teen.html','_self')">Teen Form</button>
+			
+		</div>
+	<div data-role="footer" ><center>EventHistoryCalendar</center></div>
 </body>
 </html>

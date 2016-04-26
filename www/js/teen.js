@@ -5,16 +5,16 @@ $(document).ready(function(){
 
 	
 function buildForm(div){
-	var path=window.location.href.replace('index.html','');
-				$.getJSON(path+"js/form.json",function(data){
-					$.getJSON(path+"js/caldata.json", function(calendarData){
+	var path=window.location.href.replace('teen.html','');
+				$.getJSON(path+"formteen.json",function(data){
+					$.getJSON(path+"saveteen.json", function(calendarData){
 					
 						
 						$table=$("<table></table>");
 						
 						//CREATING ROW AND FIRST CELL EMPTY
                         $tr=$("<tr></tr>");
-                        $th=$("<th></th>");
+                        $th=$("<th><img src='images/pitt.png' alt='Pitt Logo' width='100' height='100' /></th>");
 						$tr.append($th);
 						
 						//CREATING TABLE HEADERS USING THE TIMELINE ITEMS

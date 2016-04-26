@@ -131,7 +131,7 @@
 							$obj = $(this);
 							var name = $obj.attr('name');
 							var loadedCell = $obj.attr('alt');
-							var r = confirm("Delete?");
+							var r = confirm("Delete " +name+"?");
 							if (r == true) {										
 								//Remove item from the cell										
 								$obj.remove(); //loaded item																		

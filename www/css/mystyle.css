@@ -1,0 +1,17 @@
+.questioncol{
+	width:30%;
+}
+table{
+	border: 2px outset grey;
+	border-radius:15px;
+	text-align:center;
+	table-layout: fixed;
+	
+}
+td,th{
+    width:14%;
+    height:40px;
+	border: 1px solid black;
+	border-radius:15px;
+	text-align:center;
+}

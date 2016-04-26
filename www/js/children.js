@@ -6,6 +6,7 @@
 				var savedItem = "";
 				
 				//Draw table and items
+				var path=window.location.href.replace('children.html','');
 				$.getJSON("formchildren.json", function(data){
 					$.getJSON("savechildren.json", function(calendarData){
 						//Draw table

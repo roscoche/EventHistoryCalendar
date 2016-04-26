@@ -15,11 +15,12 @@
 			"image" : "Meat.png",
             "topicLabel" : "Eating"
         },
-        {
-            "topicID" : 4,
-			"image" : "Ball.png",
-            "topicLabel" : "Play"
-        },
+      {
+        "topicID": 4,
+        "image": "Ball.png",
+        "topicLabel": "Play"
+      },
+
         {
             "topicID" : 5,
 			"image" : "sleep.png",
